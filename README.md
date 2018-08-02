@@ -1,2 +1,2 @@
 # stigma-app
-app do stigma
+App do Stigma
