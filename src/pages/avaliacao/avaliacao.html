@@ -1,43 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>AVALIAÇÃO</ion-title>
+    <ion-buttons end>
+      <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+    </ion-buttons>
   </ion-navbar>
+  
 </ion-header>
 
 <ion-content>
 
   <ion-card>
 
-    <img src="assets/img/bjork-live.jpg"/>
+    <img src="{{aluno.img}}"/>
 
     <ion-card-content>
       <ion-card-title>
-        Björk
+        {{aluno.nome}}
       </ion-card-title>
-      <p>
-        Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
-      </p>
+      <p>{{aluno.curso}}</p>
+      <p>{{aluno.turma}}</p>
     </ion-card-content>
 
   </ion-card>
-  <ion-card>
-    <ion-item-divider color="light">Disciplina em Sala de Aula</ion-item-divider>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-  </ion-card>
-  <ion-card>
-    <ion-item-divider color="light">Participação em Atividades</ion-item-divider>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-  </ion-card>
-  <ion-card>
-    <ion-item-divider color="light">Relacionamento Interpessoal</ion-item-divider>
+  <ion-card *ngFor="let criterio of avaliacao.criterios">
+    <ion-item-divider color="light">{{criterio.descricao}}</ion-item-divider>
     <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
     <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
     <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
@@ -45,19 +32,9 @@
     <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
   </ion-card>
   <ion-list>
-
-      <ion-item>
-        <ion-input type="text" placeholder="Username"></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-input type="password" placeholder="Password"></ion-input>
-      </ion-item>
-  
-    </ion-list>
-  
-    <div padding>
-      <button ion-button color="primary" block>Sign In</button>
-    </div>
-  
+    <ion-item>
+      <ion-input type="text" placeholder="Justificativa" [(ngModel)]="avaliacao.justificativa"></ion-input>
+    </ion-item>
+  </ion-list>
+    <button ion-button block (click)="concluir()">Show Toast Bottom Position</button>
 </ion-content>
