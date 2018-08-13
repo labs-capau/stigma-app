@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PeriodoPage } from '../periodo/periodo';
+import { TurmasAvaliadasPage } from '../turmas-avaliadas/turmas-avaliadas';
 
 /**
- * Generated class for the AvaliacoesAnterioresPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+* Generated class for the AvaliacoesAnterioresPage page.
+*
+* See https://ionicframework.com/docs/components/#navigation for more info on
+* Ionic pages and navigation.
+*/
 
 @IonicPage()
 @Component({
@@ -21,5 +23,10 @@ export class AvaliacoesAnterioresPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AvaliacoesAnterioresPage');
   }
-
+  exibirPeriodo() {
+    this.navCtrl.push(PeriodoPage);
+  }
+  exibirTurmasAvaliadas() {
+    this.navCtrl.push(TurmasAvaliadasPage);
+  }
 }

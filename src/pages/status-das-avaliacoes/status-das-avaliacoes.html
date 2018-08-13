@@ -3,49 +3,61 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>STATUS AVALIAÇÕES</ion-title>
+    <ion-title>STATUS DAS AVALIAÇÕES</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
 
-    <ion-list-header>
-      <h2>PERÍODO AVALIATIVO B2</h2>
-    </ion-list-header>
+    <ion-card>
+      <ion-list>
+        <!-- <ion-list-header> -->
+        <ion-title>Avaliando</ion-title>
+        <!-- </ion-list-header> -->
+        <ion-item>
+          <h2>Turma: Informática</h2>
+          <p>Curso: Subsequente e Concomitante</p>
+          <button ion-button clear item-end>Resta 10 alunos</button>
+        </ion-item>
+        <ion-item>
+          <h2>Turma: Administração</h2>
+          <p>Curso: Subsequente e Concomitante</p>
+          <button ion-button clear item-end>Resta 8 alunos</button>
+        </ion-item>
+      </ion-list>
+    </ion-card>
 
-    <p>---------------------------------------Avaliando------------------------------------------</p>
+    <ion-card>
+      <ion-list>
+        <!-- <ion-list-header> -->
+        <ion-title>Não Avaliada</ion-title>
+        <!-- </ion-list-header> -->
+        <ion-item>
+          <h2>Turma: Agropecuária</h2>
+          <p>Curso: Integrado ao médio</p>
+          <button ion-button clear item-end>Resta 42 alunos</button>
+        </ion-item>
+        <ion-item>
+          <h2>Turma: Informática</h2>
+          <p>Curso: Integrado ao médio</p>
+          <button ion-button clear item-end>Resta 28 alunos</button>
+        </ion-item>
+      </ion-list>
+    </ion-card>
 
-    <ion-item>
-      <h2>Turma: Informática</h2>
-      <p>Curso: Subsequente e Concomitante</p>
-      <button ion-button clear item-end>Resta 10 alunos</button>
-    </ion-item>
-
-    <ion-item>
-      <h2>Turma: Administração</h2>
-      <p>Curso: Subsequente e Concomitante</p>
-      <button ion-button clear item-end>Resta 8 alunos</button>
-    </ion-item>
-    <p>---------------------------------------Não Avaliada------------------------------------</p>
-    <ion-item>
-      <h2>Turma: Agropecuária</h2>
-      <p>Curso: Integrado ao médio</p>
-      <button ion-button clear item-end>Resta 42 alunos</button>
-    </ion-item>
-
-    <ion-item>
-      <h2>Turma: Informática</h2>
-      <p>Curso: Integrado ao médio</p>
-      <button ion-button clear item-end>Resta 28 alunos</button>
-    </ion-item>
-    <p>---------------------------------------Avaliada----------------------------------------</p>
-    <ion-item>
-      <h2>Turma: Mineração</h2>
-      <p>Curso: Integrado ao médio</p>
-      <button ion-button clear item-end>Avaliaçõs concluídas</button>
-    </ion-item>
+    <ion-card>
+      <ion-list>
+        <!-- <ion-list-header> -->
+        <ion-title>Avaliada</ion-title>
+        <!-- </ion-list-header> -->
+        <ion-item>
+          <h2>Turma: Mineração</h2>
+          <p>Curso: Integrado ao médio</p>
+          <button ion-button clear item-end>Avaliações concluídas</button>
+        </ion-item>
+      </ion-list>
+    </ion-card>
   </ion-list>
+
 </ion-content>
-
-

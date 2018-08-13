@@ -11,6 +11,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusDasAvaliacoesPage } from '../pages/status-das-avaliacoes/status-das-avaliacoes';
 import { AvaliacaoPage } from '../pages/avaliacao/avaliacao';
 import { AvaliacoesAnterioresPage } from '../pages/avaliacoes-anteriores/avaliacoes-anteriores';
+import { PeriodoPage } from '../pages/periodo/periodo';
+import { TurmasAvaliadasPage } from '../pages/turmas-avaliadas/turmas-avaliadas';
+
 
 
 @NgModule({
@@ -20,7 +23,9 @@ import { AvaliacoesAnterioresPage } from '../pages/avaliacoes-anteriores/avaliac
     ListPage,
     StatusDasAvaliacoesPage,
     AvaliacaoPage,
-    AvaliacoesAnterioresPage
+    AvaliacoesAnterioresPage,
+    PeriodoPage,
+    TurmasAvaliadasPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,9 @@ import { AvaliacoesAnterioresPage } from '../pages/avaliacoes-anteriores/avaliac
     ListPage,
     StatusDasAvaliacoesPage,
     AvaliacaoPage,
-    AvaliacoesAnterioresPage
+    AvaliacoesAnterioresPage,
+    PeriodoPage,
+    TurmasAvaliadasPage
   ],
   providers: [
     StatusBar,

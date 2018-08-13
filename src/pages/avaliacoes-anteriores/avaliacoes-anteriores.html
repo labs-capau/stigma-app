@@ -1,18 +1,32 @@
-<!--
-  Generated template for the AvaliacoesAnterioresPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Avaliacoes Anteriores</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>AVALIAÇÕES</ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
-<ion-content padding>
-
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-list-header>
+        <ion-title>AVALIAÇÕES ANTERIORES</ion-title>
+      </ion-list-header>
+      <button ion-item (click)="exibirTurmasAvaliadas()">
+        <h2>PERÍODO AVALIATIVO M1</h2>
+      </button>
+      <button ion-item (click)="exibirPeriodo1()">
+        <h2>PERÍODO AVALIATIVO B1</h2>
+      </button>
+      <button ion-item (click)="exibirPeriodo2()">
+        <h2>PERÍODO AVALIATIVO M2</h2>
+      </button>
+      <button ion-item (click)="exibirPeriodo3()">
+        <h2>PERÍODO AVALIATIVO B2</h2>
+      </button>
+      <button ion-item (click)="exibirPeriodo4()">
+        <h2>PERÍODO AVALIATIVO M1 2017.2</h2>
+      </button>
+    </ion-list>
+  </ion-card>
 </ion-content>
