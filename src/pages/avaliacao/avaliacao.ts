@@ -7,8 +7,9 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
   templateUrl: 'avaliacao.html',
 })
 export class AvaliacaoPage {
-    aluno;
-    avaliacao;
+    
+  aluno;
+  avaliacao;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
     this.aluno = {
@@ -32,9 +33,11 @@ export class AvaliacaoPage {
       ]
     }
   }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad AvaliacaoPage');
   }
+  
   concluir() {
     this.avaliacao.justificativa='';
     let toast = this.toastCtrl.create({
@@ -44,4 +47,10 @@ export class AvaliacaoPage {
     });
     toast.present(toast);
   }
+
+  starClicked(criterio, nota) {
+    console.log("Critério: " + criterio.descricao + " | Rated : " + nota);
+    criterio.nota = nota;
+  }
+  
 }

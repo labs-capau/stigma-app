@@ -13,8 +13,7 @@ import { AvaliacaoPage } from '../pages/avaliacao/avaliacao';
 import { AvaliacoesAnterioresPage } from '../pages/avaliacoes-anteriores/avaliacoes-anteriores';
 import { PeriodoPage } from '../pages/periodo/periodo';
 import { TurmasAvaliadasPage } from '../pages/turmas-avaliadas/turmas-avaliadas';
-
-
+import { IonRating } from '../components/ion-rating/ion-rating';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,8 @@ import { TurmasAvaliadasPage } from '../pages/turmas-avaliadas/turmas-avaliadas'
     AvaliacaoPage,
     AvaliacoesAnterioresPage,
     PeriodoPage,
-    TurmasAvaliadasPage
+    TurmasAvaliadasPage,
+    IonRating
   ],
   imports: [
     BrowserModule,

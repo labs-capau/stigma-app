@@ -25,16 +25,20 @@
   </ion-card>
   <ion-card *ngFor="let criterio of avaliacao.criterios">
     <ion-item-divider color="light">{{criterio.descricao}}</ion-item-divider>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
-    <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
+    <ion-rating
+      [numStars]="5"
+      [readOnly]="false"
+      [value]="0"
+      (clicked)="starClicked(criterio, $event)">
+    </ion-rating>
   </ion-card>
+
   <ion-list>
     <ion-item>
       <ion-input type="text" placeholder="Justificativa" [(ngModel)]="avaliacao.justificativa"></ion-input>
     </ion-item>
   </ion-list>
-    <button ion-button block (click)="concluir()">Show Toast Bottom Position</button>
+    
+  <button ion-button block (click)="concluir()">Show Toast Bottom Position</button>  
+
 </ion-content>
