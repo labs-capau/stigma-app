@@ -14,6 +14,7 @@ import { AvaliacoesAnterioresPage } from '../pages/avaliacoes-anteriores/avaliac
 import { PeriodoPage } from '../pages/periodo/periodo';
 import { TurmasAvaliadasPage } from '../pages/turmas-avaliadas/turmas-avaliadas';
 import { IonRating } from '../components/ion-rating/ion-rating';
+import { AvaliacaoProvider } from '../providers/avaliacao/avaliacao';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { IonRating } from '../components/ion-rating/ion-rating';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AvaliacaoProvider
   ]
 })
 export class AppModule {}
