@@ -58,7 +58,11 @@ export class AvaliacaoProvider {
               'nota': '0'
             },
             {
-              'descricao':'Disciplina',
+              'descricao':'Disciplina em Sala',
+              'nota':'0'
+            },
+            {
+              'descricao':'Participação em Sala',
               'nota':'0'
             }
           ]
