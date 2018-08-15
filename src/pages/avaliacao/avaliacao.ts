@@ -24,13 +24,29 @@ export class AvaliacaoPage {
   }
   
   concluir() {
-    this.avaliacao.justificativa='';
-    let toast = this.toastCtrl.create({
-      message: 'Aluno avaliado com sucesso!',
-      duration: 2000,
-      position: "bottom"
+    this.avaliacaoProvider.save(this.avaliacao).then(() => {
+
+      let toast = this.toastCtrl.create({
+        message: 'Aluno avaliado com sucesso!',
+        duration: 2000,
+        position: "bottom"
+      });
+      toast.present(toast);
+
+      this.avaliacaoProvider.next(0,0).then((avaliacao) => {
+        this.avaliacao = avaliacao;
+      });
+
+    }).catch(() => {
+      let toast = this.toastCtrl.create({
+        message: 'Erro ao avaliar aluno!',
+        duration: 2000,
+        position: "bottom"
+      });
+      toast.present(toast);
+      
     });
-    toast.present(toast);
+   
   }
 
   starClicked(criterio, nota) {
