@@ -13,27 +13,27 @@ export class AvaliacaoProvider {
       resolve({
         'avaliando':[
           {
-            'turma':'2017/2',
-            'curso':'Info p/ Internet',
+            'turma':'Informática 2017.2',
+            'curso':'Informática para Internet',
             'resta':15
           },
           {
-            'turma':'2018/1',
-            'curso':'Info p/ Internet',
+            'turma':'Agropecuária 2018.1',
+            'curso':'Agropecuária',
             'resta':9
           }
         ],
         'avaliar':[
           {
-            'turma':'2018/2',
-            'curso':'Info p/ Internet',
+            'turma':'Administração 2018.2',
+            'curso':'Administração',
             'resta':50
           }
         ],
         'avaliadas':[
           {
-            'turma':'2016/1',
-            'curso':'Info p/ Internet',
+            'turma':'Mineração 2016.1',
+            'curso':'Mineração',
             'resta':0
           }
         ]
