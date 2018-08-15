@@ -1,6 +1,6 @@
 {
   "name": "stigma-app",
-  "app_id": "",
+  "app_id": "ec6d5077",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
