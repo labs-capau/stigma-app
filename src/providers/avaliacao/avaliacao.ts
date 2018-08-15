@@ -69,8 +69,11 @@ export class AvaliacaoProvider {
 
   save(avaliacao): Promise<any> {
     return new Promise((resolve, reject) => {
-      resolve(200);
-      reject(new Error('Error'));
+      if (avaliacao.justificativa) {
+        resolve(200);
+      } else {
+        reject(new Error('Error'));
+      }
     });
   }
 
