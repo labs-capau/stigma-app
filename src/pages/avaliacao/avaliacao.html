@@ -5,40 +5,37 @@
       <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
     </ion-buttons>
   </ion-navbar>
-  
+
 </ion-header>
 
 <ion-content>
 
   <ion-card>
-
-    <img src="{{avaliacao.aluno.img}}"/>
-
-    <ion-card-content>
-      <ion-card-title>
-        {{avaliacao.aluno.nome}}
-      </ion-card-title>
-      <p>{{avaliacao.aluno.curso}}</p>
-      <p>{{avaliacao.aluno.turma}}</p>
-    </ion-card-content>
-
+    <ion-item>
+      <ion-avatar item-start>
+        <img style="width: 80px; height: 80px;" src="{{avaliacao.aluno.img}}"/>
+      </ion-avatar>
+      <h2>{{avaliacao.aluno.nome}}</h2>
+      <p>Curso: {{avaliacao.aluno.curso}}</p>
+      <p>Turma: {{avaliacao.aluno.turma}}</p>
+    </ion-item>
   </ion-card>
   <ion-card *ngFor="let criterio of avaliacao.criterios">
     <ion-item-divider color="light">{{criterio.descricao}}</ion-item-divider>
     <ion-rating
-      [numStars]="5"
-      [readOnly]="false"
-      [value]="0"
-      (clicked)="starClicked(criterio, $event)">
-    </ion-rating>
-  </ion-card>
+    [numStars]="5"
+    [readOnly]="false"
+    [value]="0"
+    (clicked)="starClicked(criterio, $event)">
+  </ion-rating>
+</ion-card>
 
-  <ion-list>
-    <ion-item>
-      <ion-input type="text" placeholder="Justificativa" [(ngModel)]="avaliacao.justificativa"></ion-input>
-    </ion-item>
-  </ion-list>
-    
-  <button ion-button block (click)="concluir()">Ok!</button>  
+<ion-list>
+  <ion-item>
+    <ion-input type="text" placeholder="Justificativa" [(ngModel)]="avaliacao.justificativa"></ion-input>
+  </ion-item>
+</ion-list>
+
+<button ion-button block (click)="concluir()">Ok!</button>
 
 </ion-content>
