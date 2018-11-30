@@ -10,44 +10,17 @@
 <ion-content>
   <ion-list>
 
-    <ion-card>
+    <ion-card *ngFor="let turma of status.turmas">
       <ion-list>
-        <!-- <ion-list-header> -->
-        <ion-title>Avaliando</ion-title>
         <!-- </ion-list-header> -->
-        <ion-item  *ngFor="let avaliando of status.avaliando">
-          <h2>Turma: {{avaliando.turma}}</h2>
-          <p>Curso: {{avaliando.curso}}</p>
-          <button ion-button clear item-end> Resta {{avaliando.resta}} alunos</button>
+        <ion-item>
+          <h2>Turma: {{turma.turma}}</h2>
+          <p>Curso: {{turma.curso}}</p>
+          <button ion-button clear item-end> Resta {{turma.resta}} alunos</button>
         </ion-item>
       </ion-list>
     </ion-card>
 
-    <ion-card>
-      <ion-list>
-        <!-- <ion-list-header> -->
-        <ion-title>Não Avaliada</ion-title>
-        <!-- </ion-list-header> -->
-        <ion-item *ngFor="let avaliar of status.avaliar">
-          <h2>Turma: {{avaliar.turma}}</h2>
-          <p>Curso: {{avaliar.curso}}</p>
-          <button ion-button clear item-end>Resta {{avaliar.resta}} alunos</button>
-        </ion-item>
-      </ion-list>
-    </ion-card>
-
-    <ion-card>
-      <ion-list>
-        <!-- <ion-list-header> -->
-        <ion-title>Avaliada</ion-title>
-        <!-- </ion-list-header> -->
-        <ion-item *ngFor="let avaliadas of status.avaliadas">
-          <h2>Turma: {{avaliadas.turma}}</h2>
-          <p>Curso: {{avaliadas.curso}}</p>
-          <button ion-button clear item-end>Resta {{avaliadas.resta}} alunos</button>
-        </ion-item>
-      </ion-list>
-    </ion-card>
   </ion-list>
 
 </ion-content>

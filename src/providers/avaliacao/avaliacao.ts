@@ -1,17 +1,16 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AvaliacaoProvider {
 
-  /*constructor(public http: HttpClient) {
+  constructor() {
     console.log('Hello AvaliacaoProvider Provider');
-  }*/
+  }
 
   status(professor_id): Promise<any> {
     return new Promise((resolve, reject) => {
       resolve({
-        'avaliando':[
+        'turmas':[
           {
             'turma':'Informática 2017.2',
             'curso':'Informática para Internet',
@@ -21,16 +20,12 @@ export class AvaliacaoProvider {
             'turma':'Agropecuária 2018.1',
             'curso':'Agropecuária',
             'resta':9
-          }
-        ],
-        'avaliar':[
+          },
           {
             'turma':'Administração 2018.2',
             'curso':'Administração',
             'resta':50
-          }
-        ],
-        'avaliadas':[
+          },
           {
             'turma':'Mineração 2016.1',
             'curso':'Mineração',
