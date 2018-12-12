@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { StatusDasAvaliacoesPage } from '../pages/status-das-avaliacoes/status-das-avaliacoes';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,7 +12,7 @@ import { StatusDasAvaliacoesPage } from '../pages/status-das-avaliacoes/status-d
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = StatusDasAvaliacoesPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 

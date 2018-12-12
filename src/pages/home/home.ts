@@ -1,31 +1,31 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { StatusDasAvaliacoesPage } from '../status-das-avaliacoes/status-das-avaliacoes';
-import { AvaliacaoPage } from '../avaliacao/avaliacao';
-import { AvaliacoesAnterioresPage } from '../avaliacoes-anteriores/avaliacoes-anteriores';
+import { NavController, NavParams} from 'ionic-angular';
+import { AuthProvider } from '../../providers/auth/auth';
 
-
+/**
+* Generated class for the HomePage page.
+*
+* See https://ionicframework.com/docs/components/#navigation for more info on
+* Ionic pages and navigation.
+*/
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
+
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-    
-  }
+  autenticacao;
 
-   exibirStatus() {
-     this.navCtrl.push(StatusDasAvaliacoesPage);
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authProvider: AuthProvider) {
 
-  exibirAvaliacao() {
-    this.navCtrl.push(AvaliacaoPage);
-  }
+    this.autenticacao = {turmas: []};
 
-  exibirAvaliacoesAnteriores() {
-    this.navCtrl.push(AvaliacoesAnterioresPage);
+    this.authProvider.login().then((autenticacao) => {
+      this.autenticacao = autenticacao;
+      console.log(autenticacao);
+    });
   }
 
 }

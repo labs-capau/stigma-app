@@ -8,7 +8,6 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusDasAvaliacoesPage } from '../pages/status-das-avaliacoes/status-das-avaliacoes';
 import { AvaliacaoPage } from '../pages/avaliacao/avaliacao';
 import { AvaliacoesAnterioresPage } from '../pages/avaliacoes-anteriores/avaliacoes-anteriores';
 import { PeriodoPage } from '../pages/periodo/periodo';
@@ -22,7 +21,6 @@ import { AuthProvider } from '../providers/auth/auth';
     MyApp,
     HomePage,
     ListPage,
-    StatusDasAvaliacoesPage,
     AvaliacaoPage,
     AvaliacoesAnterioresPage,
     PeriodoPage,
@@ -38,7 +36,6 @@ import { AuthProvider } from '../providers/auth/auth';
     MyApp,
     HomePage,
     ListPage,
-    StatusDasAvaliacoesPage,
     AvaliacaoPage,
     AvaliacoesAnterioresPage,
     PeriodoPage,

@@ -1,82 +1,24 @@
-<!-- <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Inicio</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-
-   <h3></h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content> -->
-
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>INICIO</ion-title>
+    <ion-title>AVALIAÇÕES</ion-title>
   </ion-navbar>
 </ion-header>
 
-<!-- <ion-content class="list-avatar-page">
-
+<ion-content>
   <ion-list>
 
-    <ion-list-header>
-      <h2>PERÍODO AVALIATIVO B2</h2>
-    </ion-list-header>
+    <ion-card *ngFor="let turma of autenticacao.turmas">
+      <ion-list>
 
-    <button ion-item (click)="exibirStatus()">
-      <ion-icon name="stats" item-start></ion-icon>
-      <h3>STATUS DAS AVALIAÇÕES</h3>
-    </button>
-
-    <button ion-item (click)="exibirAvaliacao()">
-      <ion-icon name="md-checkbox-outline" item-start></ion-icon>
-      <h3>INICIAR AVALIAÇÂO</h3>
-    </button>
-
-    <button ion-item (click)="exibirAvaliacoesAnteriores()">
-      <ion-icon name="paper" item-start></ion-icon>
-      <h3>AVALIAÇÕES ANTERIORES</h3>
-    </button>
+        <ion-item>
+          <h2>Turma: {{turma.descricao}}</h2>
+          <p>Curso: {{turma.curso}}</p>
+          <button ion-button clear item-end (click)='realizar_avaliacao'> Resta {{turma.avls_pendentes}} alunos</button>
+        </ion-item>
+        
+      </ion-list>
+    </ion-card>
 
   </ion-list>
 
-</ion-content>
-
-</ion-content> -->
-
-
-
-<ion-content padding>
-  <ion-card class="cards-list-demo">
-    <ion-card-header>PERÍODO AVALIATIVO B2</ion-card-header>
-
-    <ion-list>
-      <button ion-item (click)="exibirStatus()">
-        <ion-icon name="stats" item-start></ion-icon>
-        STATUS DAS AVALIAÇÕES
-      </button>
-
-      <button ion-item (click)="exibirAvaliacao()">
-        <ion-icon name="md-checkbox-outline" item-start></ion-icon>
-        INICIAR AVALIAÇÂO
-      </button>
-
-      <button ion-item (click)="exibirAvaliacoesAnteriores()">
-        <ion-icon name="paper" item-start></ion-icon>
-        AVALIAÇÕES ANTERIORES
-      </button>
-    </ion-list>
-  </ion-card>
 </ion-content>
