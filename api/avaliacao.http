@@ -1,0 +1,17 @@
+@host=https://stigma.test/api
+
+###
+GET {{host}}/avaliacao/next HTTP/1.1
+Content-Type: application/application/x-www-form-urlencoded
+
+{
+    turma_id=1&api_token=0000000
+}
+
+###
+POST {{host}}/avaliacao/save HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+{
+   ... 
+}
