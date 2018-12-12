@@ -17,7 +17,8 @@ export class AuthProvider {
   login() {
     return Promise.resolve(
       {
-        'turmas':[
+        ciclo:'2018.B2',
+        turmas:[
           {
             turma_id:1,
             descricao:'1º Mod em INFO',
