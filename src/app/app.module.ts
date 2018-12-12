@@ -15,6 +15,7 @@ import { PeriodoPage } from '../pages/periodo/periodo';
 import { TurmasAvaliadasPage } from '../pages/turmas-avaliadas/turmas-avaliadas';
 import { IonRating } from '../components/ion-rating/ion-rating';
 import { AvaliacaoProvider } from '../providers/avaliacao/avaliacao';
+import { AuthProvider } from '../providers/auth/auth';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AvaliacaoProvider } from '../providers/avaliacao/avaliacao';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AvaliacaoProvider
+    AvaliacaoProvider,
+    AuthProvider
   ]
 })
 export class AppModule {}
