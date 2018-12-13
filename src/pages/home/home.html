@@ -13,7 +13,7 @@
         <ion-item>
           <h2>Turma: {{turma.descricao}}</h2>
           <p>Curso: {{turma.curso}}</p>
-          <button ion-button clear item-end (click)='realizar_avaliacao'> Resta {{turma.avls_pendentes}} alunos</button>
+          <button ion-button clear item-end (click)='exibirAvaliacao()'> Resta {{turma.avls_pendentes}} alunos</button>
         </ion-item>
         
       </ion-list>

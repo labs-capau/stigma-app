@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
+import { AvaliacaoPage } from '../avaliacao/avaliacao';
 
 /**
 * Generated class for the HomePage page.
@@ -26,6 +27,10 @@ export class HomePage {
       this.autenticacao = autenticacao;
       console.log(autenticacao);
     });
+  }
+
+  exibirAvaliacao(){
+    this.navCtrl.push(AvaliacaoPage);
   }
 
 }
